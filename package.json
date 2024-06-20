@@ -1,0 +1,44 @@
+{
+  "name": "expo-related-digital",
+  "version": "0.1.0",
+  "description": "react-native-related-digital expo module",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "scripts": {
+    "build": "expo-module build",
+    "clean": "expo-module clean",
+    "lint": "expo-module lint",
+    "test": "expo-module test",
+    "prepare": "expo-module prepare",
+    "prepublishOnly": "expo-module prepublishOnly",
+    "expo-module": "expo-module",
+    "open:ios": "xed example/ios",
+    "open:android": "open -a \"Android Studio\" example/android"
+  },
+  "keywords": [
+    "react-native",
+    "expo",
+    "expo-related-digital",
+    "ExpoRelatedDigital"
+  ],
+  "repository": "https://github.com/ExpoPlugin-Hub/Expo-RelatedDigital",
+  "bugs": {
+    "url": "https://github.com/ExpoPlugin-Hub/Expo-RelatedDigital/issues"
+  },
+  "author": "expo-plugin-hub <> (https://github.com/ExpoPlugin-Hub)",
+  "license": "MIT",
+  "homepage": "https://github.com/ExpoPlugin-Hub/Expo-RelatedDigital#readme",
+  "dependencies": {
+    "react-native-related-digital": "^1.0.28"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.25",
+    "expo-module-scripts": "^3.5.2",
+    "expo-modules-core": "^1.12.14"
+  },
+  "peerDependencies": {
+    "expo": "*",
+    "react": "*",
+    "react-native": "*"
+  }
+}

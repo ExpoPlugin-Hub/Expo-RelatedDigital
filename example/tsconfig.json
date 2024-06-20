@@ -1,0 +1,10 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "paths": {
+      "expo-related-digital": ["../src/index"],
+      "expo-related-digital/*": ["../src/*"]
+    }
+  }
+}
