@@ -56,3 +56,7 @@ yarn-error.log
 # Expo
 .expo/*
 yarn.lock
+example/assets/GoogleService-Info.plist
+example/assets/google-services.json
+example/android/*
+example/ios/*

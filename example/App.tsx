@@ -5,7 +5,7 @@ import * as ExpoRelatedDigital from 'expo-related-digital';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>{ExpoRelatedDigital.hello()}</Text>
+      <Text>Hello!</Text>
     </View>
   );
 }

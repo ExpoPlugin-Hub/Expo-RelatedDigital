@@ -2,34 +2,48 @@
 
 react-native-related-digital expo module
 
-# API documentation
+## Supported versions
 
-- [Documentation for the main branch](https://github.com/expo/expo/blob/main/docs/pages/versions/unversioned/sdk/related-digital.md)
-- [Documentation for the latest stable release](https://docs.expo.dev/versions/latest/sdk/related-digital/)
+**"react": ">=16.8.6"**
 
-# Installation in managed Expo projects
+**"react-native": ">=0.60.0"**
 
-For [managed](https://docs.expo.dev/archive/managed-vs-bare/) Expo projects, please follow the installation instructions in the [API documentation for the latest stable release](#api-documentation). If you follow the link and there is no documentation available then this library is not yet usable within managed projects &mdash; it is likely to be included in an upcoming Expo SDK release.
+## Installation
 
-# Installation in bare React Native projects
-
-For bare React Native projects, you must ensure that you have [installed and configured the `expo` package](https://docs.expo.dev/bare/installing-expo-modules/) before continuing.
-
-### Add the package to your npm dependencies
+- Install prerequisites.
 
 ```
-npm install expo-related-digital
+npx expo install @react-native-async-storage/async-storage
+npx expo install @react-native-firebase/app
+npx expo install expo-build-properties
 ```
 
-### Configure for iOS
+- Configuration app.json
 
-Run `npx pod-install` after installing the npm package.
+```json
+{
+  "expo": {
+    "android": {
+      "package": "com.example.app"
+    },
+    "ios": {
+      "bundleIdentifier": "com.example.app"
+    },
+    "plugins": [
+      "expo-related-digital",
+      "@react-native-firebase/app",
+      "@react-native-firebase/messaging",
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "useFrameworks": "static"
+          }
+        }
+      ]
+    ]
+  }
+}
+```
 
-
-### Configure for Android
-
-
-
-# Contributing
-
-Contributions are very welcome! Please refer to guidelines described in the [contributing guide]( https://github.com/expo/expo#contributing).
+- Install package.

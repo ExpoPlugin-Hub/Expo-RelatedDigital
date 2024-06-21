@@ -18,7 +18,6 @@ const withRelatedDigital: ConfigPlugin<RelatedDigitalPluginProps | void> = (
 ) => {
   return withPlugins(config, [
     // Android
-
     // IOS
   ]);
 };
