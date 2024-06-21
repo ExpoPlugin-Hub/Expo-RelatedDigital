@@ -28,6 +28,9 @@
   "author": "expo-plugin-hub <> (https://github.com/ExpoPlugin-Hub)",
   "license": "MIT",
   "homepage": "https://github.com/ExpoPlugin-Hub/Expo-RelatedDigital#readme",
+  "jest": {
+    "preset": "expo-module-scripts/ios"
+  },
   "dependencies": {
     "react-native-related-digital": "^1.0.28"
   },
