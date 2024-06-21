@@ -1,7 +1,7 @@
 import { ConfigPlugin } from '@expo/config-plugins';
 import { RelatedDigitalPluginProps } from './index';
 
-export const withNotificationsAndroid: ConfigPlugin<RelatedDigitalPluginProps> = (
+export const withRelatedDigitalAndroid: ConfigPlugin<RelatedDigitalPluginProps> = (
   config,
   {}
 ) => {

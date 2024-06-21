@@ -1,7 +1,7 @@
 import { ConfigPlugin, createRunOncePlugin } from '@expo/config-plugins';
 
-import { withNotificationsAndroid } from './withRelatedDigitalAndroid';
-import { withNotificationsIOS } from './withRelatedDigitalIOS';
+import { withRelatedDigitalAndroid } from './withRelatedDigitalAndroid';
+import { withRelatedDigitalIOS } from './withRelatedDigitalIOS';
 
 const pkg = require('expo-related-digital/package.json');
 
@@ -11,8 +11,8 @@ const withRelatedDigital: ConfigPlugin<RelatedDigitalPluginProps | void> = (
   config,
   props
 ) => {
-  config = withNotificationsAndroid(config, props || {});
-  config = withNotificationsIOS(config, props || {});
+  config = withRelatedDigitalAndroid(config, props || {});
+  config = withRelatedDigitalIOS(config, props || {});
   return config;
 };
 
