@@ -1,19 +1,27 @@
-import { ConfigPlugin, createRunOncePlugin } from '@expo/config-plugins';
+import {
+  ConfigPlugin,
+  createRunOncePlugin,
+  withPlugins
+} from '@expo/config-plugins';
 
-import { withRelatedDigitalAndroid } from './withRelatedDigitalAndroid';
-import { withRelatedDigitalIOS } from './withRelatedDigitalIOS';
-
-const pkg = require('expo-related-digital/package.json');
+import {} from './android';
+import {} from './ios';
 
 export type RelatedDigitalPluginProps = {};
 
+/*
+ * This plugin is used to add Related Digital to your Expo project.
+ */
 const withRelatedDigital: ConfigPlugin<RelatedDigitalPluginProps | void> = (
   config,
   props
 ) => {
-  config = withRelatedDigitalAndroid(config, props || {});
-  config = withRelatedDigitalIOS(config, props || {});
-  return config;
+  return withPlugins(config, [
+    // Android
+
+    // IOS
+  ]);
 };
 
+const pkg = require('expo-related-digital/package.json');
 export default createRunOncePlugin(withRelatedDigital, pkg.name, pkg.version);
